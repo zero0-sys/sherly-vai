@@ -133,7 +133,7 @@ async function sendFrame() {
     off.getContext("2d").drawImage(video, 0, 0);
 
     try {
-        const res = await fetch("/detect", {
+        const res = await fetch("https://sherly-vai-production.up.railway.app/detect", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ image: off.toDataURL("image/jpeg", 0.5) })
