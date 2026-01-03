@@ -1,4 +1,4 @@
-vimport cv2
+import cv2
 import mediapipe as mp
 from mediapipe.python.solutions import pose as mp_pose
 from mediapipe.python.solutions import drawing_utils as mp_drawing
