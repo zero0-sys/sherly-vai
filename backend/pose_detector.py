@@ -1,14 +1,12 @@
 import cv2
 import mediapipe as mp
-from mediapipe.python.solutions import pose as mp_pose
-from mediapipe.python.solutions import drawing_utils as mp_drawing
 import numpy as np
 
 class PoseDetector:
     def __init__(self):
-        self.mp_pose = mp_pose
+        self.mp_pose = mp.solutions.pose
         self.pose = self.mp_pose.Pose(static_image_mode=False, min_detection_confidence=0.5)
-        self.mp_draw = mp_drawing
+        self.mp_draw = mp.solutions.drawing_utils
 
     def detect(self, frame):
         if frame is None:
